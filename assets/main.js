@@ -14,7 +14,7 @@ require.config({
     paths: {
         jquery: '/bags/tiddlybone_public/jquery-1.8.2.min',
         underscore: '/bags/tiddlybone_public/underscore-1.3.3.min',
-        backbone: '/bags/tiddlybone_public/backbone-0.9.2',
+        backbone: '/bags/tiddlybone_public/backbone-0.9.2.min',
         tiddler: '/bags/tiddlybone_public/Tiddler',
         tiddlers: '/bags/tiddlybone_public/Tiddlers'
     }
