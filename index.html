@@ -9,7 +9,9 @@
         <header>
             <h1>TiddlyBone</h1>
             <p>An example <a href="http://github.com/cdent/tsapp">tsapp</a> using
-                <a href="http://backbonejs.org/">Backbone.js</a> and <a href="http://requirejs.org/">RequireJS</a></p>
+                <a href="http://backbonejs.org/">Backbone.js</a> and <a href="http://requirejs.org/">RequireJS</a>.
+                This is very much work in progress.
+            </p>
             <hr>
         </header>
         <nav>
@@ -70,7 +72,7 @@
                     <input type="text" id="tiddler-tags" value="<%= tags %>" placeholder="comma separated list"/>
                     <label for="tiddler-content">Content:</label>
                     <br>
-                    <textarea rows="10" id="tiddler-content" value="<%= text %>"/>
+                    <textarea rows="10" id="tiddler-content"><%= text %></textarea>
                     <input type="submit" class="submit-button" value="Save"/>
                 </form>
             </div>

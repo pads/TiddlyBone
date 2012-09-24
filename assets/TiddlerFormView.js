@@ -13,6 +13,7 @@ define(['jquery', 'backbone', 'underscore'], function ($, Backbone, _) {
                 text: $('#tiddler-content').val(),
                 tags: $('#tiddler-tags').val().split(',')
             });
+
             this.model.save();
             document.location.href = '#tiddler/' + this.model.get('title');
 

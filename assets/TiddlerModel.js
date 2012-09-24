@@ -5,7 +5,7 @@ define(['backbone'], function (Backbone) {
         idAttribute: 'title',
         defaults: {
             'title': 'New Tiddler',
-            'text': null,
+            'text': '',
             'tags': [],
             'fields': {}
         }
