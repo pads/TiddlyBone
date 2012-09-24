@@ -19,7 +19,8 @@ require.config({
         tiddlerCollection: '/bags/tiddlybone_public/TiddlerCollection',
         tiddlerView: '/bags/tiddlybone_public/TiddlerView',
         tiddlersListView: '/bags/tiddlybone_public/TiddlersListView',
-        tiddlerListItemView: '/bags/tiddlybone_public/TiddlerListItemView'
+        tiddlerListItemView: '/bags/tiddlybone_public/TiddlerListItemView',
+        tiddlerFormView: '/bags/tiddlybone_public/TiddlerFormView'
     }
 });
 
@@ -31,10 +32,11 @@ require(
         'tiddlerCollection',
         'tiddlerModel',
         'tiddlerView',
-        'tiddlersListView'
+        'tiddlersListView',
+        'tiddlerFormView'
     ],
 
-    function ($, _, Backbone, TiddlerCollection, TiddlerModel, TiddlerView, TiddlersListView) {
+    function ($, _, Backbone, TiddlerCollection, TiddlerModel, TiddlerView, TiddlersListView, TiddlerFormView) {
 
         var AppRouter = Backbone.Router.extend({
 
@@ -69,7 +71,9 @@ require(
             },
 
             newTiddler: function () {
-
+                this.tiddler = new TiddlerModel();
+                this.newTiddlerForm = new TiddlerFormView({ model: this.tiddler });
+                $('section').html(this.newTiddlerForm.render().el);
             }
         });
 
