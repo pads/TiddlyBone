@@ -8,14 +8,15 @@
     <body>
         <header>
             <h1>TiddlyBone</h1>
-            <p>An example <a href="http://github.com/cdent/tsapp">tsapp</a> using <a href="http://backbonejs.org/">Backbone.js</a></p>
+            <p>An example <a href="http://github.com/cdent/tsapp">tsapp</a> using
+                <a href="http://backbonejs.org/">Backbone.js</a> and <a href="http://requirejs.org/">RequireJS</a></p>
             <hr>
         </header>
         <nav>
             <ul>
                 <li id="tiddlers"><a href="#tiddlers">Tiddlers</a></li>
-                <li id="new-tiddler"><a href="#tiddlers">New Tiddler</a></li>
-                <li id="get-tiddler"><a href="#tiddlers">Get Tiddler</a></li>
+                <li id="new-tiddler"><a href="#newTiddler">New Tiddler</a></li>
+                <li id="get-tiddler"><a href="#tiddler">Get Tiddler</a></li>
             </ul>
         </nav>
         <section>
@@ -26,6 +27,34 @@
                 <p>Brought to you by <a href="http://tiddlyspace.com">Tiddlyspace</a></p>
             </div>
         </footer>
+
         <script data-main="/bags/tiddlybone_public/main" src="/bags/tiddlybone_public/tiddlers/require.js"></script>
+
+        <script type="text/template" id="tiddler-list-template">
+            <a href='#tiddler/<%= title %>'><%= title %></a>
+        </script>
+
+        <script type="text/template" id="tiddler-template">
+            <article>
+                <h3><%= title %></h3>
+                <br>
+                <div id="content">
+                    <pre><%= text %></pre>
+                </div>
+                <br>
+                <div id="meta">
+                    <ul>
+                        <li>revision: <%= revision %></li>
+                        <li>creator: <%= creator %></li>
+                        <li>created: <%= created %></li>
+                        <li>modifier: <%= modifier %></li>
+                        <li>modified: <%= modified %></li>
+                        <li>bag: <%= bag %></li>
+                        <li>tags: <%= tags %></li>
+                    </ul>
+                </div>
+            </article>
+        </script>
+
     </body>
 </html>

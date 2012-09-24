@@ -14,13 +14,17 @@ h1 {
 }
 
 hr {
-    width: 90%;
+    width: 95%;
 }
 
-nav {
-    margin-left: 2em;
-    width: 15%;
-    float: left;
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;
     border-right: 1px solid gray;
 }
 
@@ -33,9 +37,24 @@ li a {
 }
 
 section {
-    clear: both;
-    position: fixed;
-    left: 20%
+    position: relative;
+    margin: 2em 2em 2em 2em;
+    border: 1px solid gray;
+    padding: 1em 1em 1em 1em;
+}
+
+article h3 {
+    font-size: 2.5em;
+}
+
+article pre {
+    font-family: monospace;
+    line-height: 1.4;
+}
+
+article ul {
+    margin-left: 1em;
+    list-style: square;
 }
 
 #anchor {
