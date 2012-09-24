@@ -66,6 +66,10 @@ article ul {
     list-style: square;
 }
 
+#controls {
+    margin-top: 1em;
+}
+
 #form-wrapper {
     width: 700px;
     margin-top: 25px;

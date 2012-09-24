@@ -11,7 +11,7 @@ define(['jquery', 'backbone', 'underscore'], function ($, Backbone, _) {
             this.model.set({
                 title: $('#tiddler-title').val(),
                 text: $('#tiddler-content').val(),
-                tags: $('#tiddler-tags').val()
+                tags: $('#tiddler-tags').val().split(',')
             });
             this.model.save();
             document.location.href = '#tiddler/' + this.model.get('title');

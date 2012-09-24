@@ -41,9 +41,14 @@ require(
         var AppRouter = Backbone.Router.extend({
 
             routes:{
+                'home': 'home',
                 'tiddler/:title': 'getTiddler',
                 'tiddlers': 'getTiddlers',
                 'newTiddler': 'newTiddler'
+            },
+
+            home: function () {
+                $('section').empty();
             },
 
             getTiddler: function (title) {
