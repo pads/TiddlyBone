@@ -1,7 +1,7 @@
-define(['backbone'], function (Backbone) {
+define(['backbone', 'status'], function (Backbone, status) {
 
     return Backbone.Model.extend({
-        urlRoot: '/bags/pads_public/tiddlers',
+        urlRoot: '/bags/' + status.attributes.space.recipe + '/tiddlers',
         idAttribute: 'title',
         defaults: {
             'title': 'New Tiddler',

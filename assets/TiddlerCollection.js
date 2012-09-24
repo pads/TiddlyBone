@@ -1,8 +1,8 @@
-define(['backbone', 'tiddlerModel'], function (Backbone, TiddlerModel) {
+define(['backbone', 'tiddlerModel', 'status'], function (Backbone, TiddlerModel, status) {
 
     return Backbone.Collection.extend({
         model: TiddlerModel,
-        url: '/bags/pads_public/tiddlers'
+        url: '/bags/' + status.attributes.space.recipe + '/tiddlers'
     });
 
 });
