@@ -12,16 +12,16 @@ require.config({
     },
 
     paths: {
-        jquery: '/bags/tiddlybone_public/jquery-1.8.2.min',
-        underscore: '/bags/tiddlybone_public/underscore-1.3.3.min',
-        backbone: '/bags/tiddlybone_public/backbone-0.9.2.min',
-        status: '/bags/tiddlybone_public/UserStatus',
-        tiddlerModel: '/bags/tiddlybone_public/TiddlerModel',
-        tiddlerCollection: '/bags/tiddlybone_public/TiddlerCollection',
-        tiddlerView: '/bags/tiddlybone_public/TiddlerView',
-        tiddlersListView: '/bags/tiddlybone_public/TiddlersListView',
-        tiddlerListItemView: '/bags/tiddlybone_public/TiddlerListItemView',
-        tiddlerFormView: '/bags/tiddlybone_public/TiddlerFormView'
+        jquery: '/bags/tiddlybone_public/tiddlers/jquery-1.8.2.min',
+        underscore: '/bags/tiddlybone_public/tiddlers/underscore-1.3.3.min',
+        backbone: '/bags/tiddlybone_public/tiddlers/backbone-0.9.2.min',
+        status: '/bags/tiddlybone_public/tiddlers/UserStatus',
+        tiddlerModel: '/bags/tiddlybone_public/tiddlers/TiddlerModel',
+        tiddlerCollection: '/bags/tiddlybone_public/tiddlers/TiddlerCollection',
+        tiddlerView: '/bags/tiddlybone_public/tiddlers/TiddlerView',
+        tiddlersListView: '/bags/tiddlybone_public/tiddlers/TiddlersListView',
+        tiddlerListItemView: '/bags/tiddlybone_public/tiddlers/TiddlerListItemView',
+        tiddlerFormView: '/bags/tiddlybone_public/tiddlers/TiddlerFormView'
     }
 });
 
