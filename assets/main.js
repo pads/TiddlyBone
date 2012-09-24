@@ -42,6 +42,7 @@ require(
 
             routes:{
                 'home': 'home',
+                'tiddler': 'getTiddlerByInput',
                 'tiddler/:title': 'getTiddler',
                 'tiddlers': 'getTiddlers',
                 'newTiddler': 'newTiddler'
@@ -49,6 +50,18 @@ require(
 
             home: function () {
                 $('section').empty();
+            },
+
+            getTiddlerByInput: function () {
+                var context = this;
+                var title = $('#title-input').val();
+                this.tiddler = new TiddlerModel({ title: title });
+                this.tiddlerView = new TiddlerView({ model: this.tiddler });
+                this.tiddler.fetch({
+                    success: function () {
+                        $('section').html(context.tiddlerView.render().el);
+                    }
+                });
             },
 
             getTiddler: function (title) {
