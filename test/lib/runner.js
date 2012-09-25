@@ -24,8 +24,8 @@ require.config({
 require([
             'tiddlerModel',
             'tiddlerCollection',
-            'spec/TiddlerModelSpec',
-            'spec/TiddlerCollectionSpec'
+            '/test/spec/TiddlerModelSpec.js',
+            '/test/spec/TiddlerCollectionSpec.js'
         ],
         function () {
 
