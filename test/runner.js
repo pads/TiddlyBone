@@ -16,34 +16,42 @@ require.config({
         underscore: '../assets/underscore-1.3.3.min',
         backbone: '../assets/backbone-0.9.2.min',
         status: '../assets/UserStatus',
-        tiddlerModel: '../assets/TiddlerModel'
+        tiddlerModel: '../assets/TiddlerModel',
+        tiddlerCollection: '../assets/TiddlerCollection'
     }
 });
 
-require(['spec/TiddlerModelSpec', 'tiddlerModel'], function () {
+require([
+            'tiddlerModel',
+            'tiddlerCollection',
+            'spec/TiddlerModelSpec',
+            'spec/TiddlerCollectionSpec'
+        ],
+        function () {
 
-    var jasmineEnv = jasmine.getEnv();
-    jasmineEnv.updateInterval = 1000;
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
 
-    var htmlReporter = new jasmine.HtmlReporter();
+            var htmlReporter = new jasmine.HtmlReporter();
 
-    jasmineEnv.addReporter(htmlReporter);
+            jasmineEnv.addReporter(htmlReporter);
 
-    jasmineEnv.specFilter = function (spec) {
-        return htmlReporter.specFilter(spec);
-    };
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
 
-    var currentWindowOnload = window.onload;
+            var currentWindowOnload = window.onload;
 
-    window.onload = function () {
-        if (currentWindowOnload) {
-            currentWindowOnload();
+            window.onload = function () {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+
         }
-        execJasmine();
-    };
-
-    function execJasmine() {
-        jasmineEnv.execute();
-    }
-
-});
+);
