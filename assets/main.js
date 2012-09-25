@@ -12,7 +12,7 @@ require.config({
     },
 
     paths: {
-        jquery: '/bags/tiddlybone_public/tiddlers/jquery-1.8.2.min',
+        jquery: '/bags/common/tiddlers/jquery',
         underscore: '/bags/tiddlybone_public/tiddlers/underscore-1.3.3.min',
         backbone: '/bags/tiddlybone_public/tiddlers/backbone-0.9.2.min',
         status: '/bags/tiddlybone_public/tiddlers/UserStatus',
