@@ -1,0 +1,12 @@
+<div id="form-wrapper">
+    <form action="">
+        <label for="tiddler-title">Title:</label>
+        <input type="text" id="tiddler-title" value="{{ title }}"/>
+        <label for="tiddler-tags">Tags:</label>
+        <input type="text" id="tiddler-tags" value="{{ tags }}" placeholder="comma separated list"/>
+        <label for="tiddler-content">Content:</label>
+        <br>
+        <textarea rows="10" id="tiddler-content">{{ text }}</textarea>
+        <input type="submit" class="submit-button" value="Save"/>
+    </form>
+</div>

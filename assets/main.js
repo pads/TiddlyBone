@@ -8,6 +8,10 @@ require.config({
         'backbone': {
             deps: ['underscore', 'jquery'],
             exports: 'Backbone'
+        },
+
+        'handlebars': {
+            exports: 'Handlebars'
         }
     },
 
@@ -15,6 +19,10 @@ require.config({
         jquery: '/bags/common/tiddlers/jquery',
         underscore: '/bags/tiddlybone_public/tiddlers/underscore-1.3.3.min',
         backbone: '/bags/tiddlybone_public/tiddlers/backbone-0.9.2.min',
+        hbs: '/bags/tiddlybone_public/tiddlers/hbs',
+        handlebars: '/bags/tiddlybone_public/tiddlers/handlebars-1.0.rc.1',
+        i18nprecompile : '/bags/tiddlybone_public/tiddlers/i18nprecompile',
+        json2 : '/bags/tiddlybone_public/tiddlers/json2',
         status: '/bags/tiddlybone_public/tiddlers/UserStatus',
         tiddlerModel: '/bags/tiddlybone_public/tiddlers/TiddlerModel',
         tiddlerCollection: '/bags/tiddlybone_public/tiddlers/TiddlerCollection',
@@ -22,6 +30,11 @@ require.config({
         tiddlersListView: '/bags/tiddlybone_public/tiddlers/TiddlersListView',
         tiddlerListItemView: '/bags/tiddlybone_public/tiddlers/TiddlerListItemView',
         tiddlerFormView: '/bags/tiddlybone_public/tiddlers/TiddlerFormView'
+    },
+
+    hbs : {
+        templateExtension : 'html',
+        disableI18n : true
     }
 });
 

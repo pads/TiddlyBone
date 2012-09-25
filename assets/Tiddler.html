@@ -1,0 +1,23 @@
+<article>
+    <h3>{{ title }}</h3>
+    <br>
+    <div id="content">
+        <pre>{{ text }}</pre>
+    </div>
+    <br>
+    <div id="meta">
+        <ul>
+            <li>revision: {{ revision }}</li>
+            <li>creator: {{ creator }}</li>
+            <li>created: {{ created }}</li>
+            <li>modifier: {{ modifier }}</li>
+            <li>modified: {{ modified }}</li>
+            <li>bag: {{ bag }}</li>
+            <li>tags: {{ tags }}</li>
+        </ul>
+    </div>
+    <div id="controls">
+        <input type="submit" class="edit-button" value="Edit"/>
+        <input type="submit" class="delete-button" value="Delete"/>
+    </div>
+</article>

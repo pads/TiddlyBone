@@ -1,7 +1,5 @@
-define(['jquery', 'backbone', 'underscore'], function ($, Backbone, _) {
+define(['jquery', 'backbone', 'underscore', 'hbs!TiddlerForm'], function ($, Backbone, _, template) {
     return Backbone.View.extend({
-
-        template:_.template($('#new-tiddler-template').html()),
 
         events: {
             'click .submit-button': 'saveTiddler'
@@ -21,7 +19,7 @@ define(['jquery', 'backbone', 'underscore'], function ($, Backbone, _) {
         },
 
         render: function () {
-            $(this.el).html(this.template(this.model.toJSON()));
+            $(this.el).html(template(this.model.toJSON()));
             return this;
         }
 
