@@ -16,7 +16,12 @@ Run `npm install` to fetch the required node modules.
 
 Run `jam install` to fetch the required JavaScript dependencies.
 
-Run `grunt copy-deps` to copy JavaScript dependencies into the assets folder so that they can be used by tsapp.
+Run `grunt copy-deps` to symlink JavaScript dependencies to the assets folder so that they can be used by tsapp.
+
+* `grunt clean-deps` removes the symlinks.
+
+For production run `jam compile assets/require.js`.  This combines all the dependencies including require.js into one
+file.
 
 Testing
 =======
