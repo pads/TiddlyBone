@@ -22,12 +22,27 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', 'lint jasmine');
 
-    grunt.registerTask('copy-deps', 'Copy jam dependencies into the assets folder.', function() {
+    grunt.registerTask('copy-deps', 'Symlink jam dependencies to the assets folder.', function() {
+
+        var fs = require('fs');
 
         grunt.file.recurse('jam', function(absolutePath, rootDir, subDir, fileName) {
             if(fileName.indexOf('.js') !== -1 && fileName.indexOf('.json') === -1) {
-                grunt.log.writeln('copying ' + absolutePath + ' to assets');
-                grunt.file.copy(absolutePath, 'assets/' + fileName);
+                grunt.log.writeln('symlinking ' + absolutePath + ' to assets folder');
+                fs.symlinkSync('../' + absolutePath, 'assets/' + fileName);
+            }
+        });
+
+    });
+
+    grunt.registerTask('clean-deps', 'Remove jam dependency symlinks.', function() {
+
+        var fs = require('fs');
+
+        grunt.file.recurse('jam', function(absolutePath, rootDir, subDir, fileName) {
+            if(fileName.indexOf('.js') !== -1 && fileName.indexOf('.json') === -1) {
+                grunt.log.writeln('symlinking ' + absolutePath + ' to assets folder');
+                fs.unlinkSync('assets/' + fileName);
             }
         });
 
