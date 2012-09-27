@@ -19,10 +19,8 @@ require.config({
         jquery: '/bags/common/tiddlers/jquery',
         underscore: '/bags/tiddlybone_public/tiddlers/underscore-1.3.3.min',
         backbone: '/bags/tiddlybone_public/tiddlers/backbone-0.9.2.min',
-        hbs: '/bags/tiddlybone_public/tiddlers/hbs',
+        hbt: '/bags/tiddlybone_public/tiddlers/hbt',
         handlebars: '/bags/tiddlybone_public/tiddlers/handlebars-1.0.rc.1',
-        i18nprecompile : '/bags/tiddlybone_public/tiddlers/i18nprecompile',
-        json2 : '/bags/tiddlybone_public/tiddlers/json2',
         status: '/bags/tiddlybone_public/tiddlers/UserStatus',
         tiddlerModel: '/bags/tiddlybone_public/tiddlers/TiddlerModel',
         tiddlerCollection: '/bags/tiddlybone_public/tiddlers/TiddlerCollection',
@@ -32,9 +30,8 @@ require.config({
         tiddlerFormView: '/bags/tiddlybone_public/tiddlers/TiddlerFormView'
     },
 
-    hbs : {
-        templateExtension : 'html',
-        disableI18n : true
+    hbt: {
+        extension: 'html'
     }
 });
 

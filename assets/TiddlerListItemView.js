@@ -1,4 +1,4 @@
-define(['jquery', 'backbone', 'underscore', 'hbs!TiddlerListItem'], function ($, Backbone, _, template) {
+define(['jquery', 'backbone', 'underscore', 'hbt!TiddlerListItem'], function ($, Backbone, _, template) {
 
     return Backbone.View.extend({
 

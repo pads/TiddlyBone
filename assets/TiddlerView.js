@@ -1,4 +1,4 @@
-define(['jquery', 'backbone', 'tiddlerFormView', 'hbs!Tiddler'],
+define(['jquery', 'backbone', 'tiddlerFormView', 'hbt!Tiddler'],
     function ($, Backbone, TiddlerFormView, template) {
         return Backbone.View.extend({
 
