@@ -21,4 +21,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-jasmine-runner');
 
     grunt.registerTask('default', 'lint jasmine');
+
+    grunt.registerTask('copy-deps', 'Copy jam dependencies into the assets folder.', function() {
+
+        grunt.file.recurse('jam', function(absolutePath, rootDir, subDir, fileName) {
+            if(fileName.indexOf('.js') !== -1 && fileName.indexOf('.json') === -1) {
+                grunt.log.writeln('copying ' + absolutePath + ' to assets');
+                grunt.file.copy(absolutePath, 'assets/' + fileName);
+            }
+        });
+
+    });
 };

@@ -1,20 +1,9 @@
 require.config({
-    shim: {
-        'underscore': {
-            deps: ['jquery'],
-            exports: '_'
-        },
-
-        'backbone': {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
-        }
-    },
 
     paths: {
-        jquery: 'lib/jquery-1.8.2.min',
-        underscore: '../assets/underscore-1.3.3.min',
-        backbone: '../assets/backbone-0.9.2.min',
+        jquery: 'test/lib/jquery-1.8.2.min',
+        underscore: '../assets/underscore',
+        backbone: '../assets/backbone',
         status: '../assets/UserStatus',
         tiddlerModel: '../assets/TiddlerModel',
         tiddlerCollection: '../assets/TiddlerCollection'

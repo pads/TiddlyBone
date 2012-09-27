@@ -10,7 +10,8 @@ describe('Tiddler Model Tests', function () {
                 }
             }
         };
-        TiddlerModel = testr('tiddlerModel', {'backbone': Backbone, 'status': mockStatus });
+        var backbone = testr('backbone');
+        TiddlerModel = testr('tiddlerModel', {'backbone': backbone, 'status': mockStatus });
     });
 
     it('should be created with the correct default attributes set', function () {

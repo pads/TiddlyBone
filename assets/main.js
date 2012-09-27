@@ -1,26 +1,12 @@
 require.config({
-    shim: {
-        'underscore': {
-            deps: ['jquery'],
-            exports: '_'
-        },
-
-        'backbone': {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
-        },
-
-        'handlebars': {
-            exports: 'Handlebars'
-        }
-    },
 
     paths: {
+        text: '/bags/tiddlybone_public/tiddlers/text',
         jquery: '/bags/common/tiddlers/jquery',
-        underscore: '/bags/tiddlybone_public/tiddlers/underscore-1.3.3.min',
-        backbone: '/bags/tiddlybone_public/tiddlers/backbone-0.9.2.min',
+        underscore: '/bags/tiddlybone_public/tiddlers/underscore',
+        backbone: '/bags/tiddlybone_public/tiddlers/backbone',
         hbt: '/bags/tiddlybone_public/tiddlers/hbt',
-        handlebars: '/bags/tiddlybone_public/tiddlers/handlebars-1.0.rc.1',
+        handlebars: '/bags/tiddlybone_public/tiddlers/handlebars',
         status: '/bags/tiddlybone_public/tiddlers/UserStatus',
         tiddlerModel: '/bags/tiddlybone_public/tiddlers/TiddlerModel',
         tiddlerCollection: '/bags/tiddlybone_public/tiddlers/TiddlerCollection',

@@ -12,7 +12,8 @@ describe('Tiddler Collection Tests', function () {
             }
         };
 
-        TiddlerModel = testr('tiddlerModel', {'backbone': Backbone, 'status': mockStatus });
+        var backbone = testr('backbone');
+        TiddlerModel = testr('tiddlerModel', {'backbone': backbone, 'status': mockStatus });
 
         TiddlerCollection = testr('tiddlerCollection', {
             'backbone': Backbone,
