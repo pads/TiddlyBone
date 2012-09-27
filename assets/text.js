@@ -1,1 +1,0 @@
-../jam/text/text.js
