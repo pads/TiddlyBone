@@ -1,4 +1,4 @@
-define(['jquery', 'backbone', 'underscore', 'hbt!TiddlerForm'], function ($, Backbone, _, template) {
+define(['jquery', 'backbone', 'hbt!TiddlerForm'], function ($, Backbone, template) {
     return Backbone.View.extend({
 
         events: {
