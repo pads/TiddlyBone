@@ -3,15 +3,8 @@ describe('Tiddler Model Tests', function () {
     var TiddlerModel;
 
     beforeEach(function () {
-        var mockStatus = {
-            attributes: {
-                space: {
-                    recipe: 'test_public'
-                }
-            }
-        };
-        var backbone = testr('backbone');
-        TiddlerModel = testr('tiddlerModel', {'backbone': backbone, 'status': mockStatus });
+
+        TiddlerModel = require('tiddlerModel');
     });
 
     it('should be created with the correct default attributes set', function () {
@@ -28,7 +21,7 @@ describe('Tiddler Model Tests', function () {
 
         var tiddlerInstance = new TiddlerModel();
 
-        expect(tiddlerInstance.urlRoot).toEqual('/bags/test_public/tiddlers');
+        expect(tiddlerInstance.urlRoot).toEqual('/bags/test_private/tiddlers');
     });
 
     it('should use the title attribute as the unique identifier', function () {

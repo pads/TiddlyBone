@@ -1,10 +1,10 @@
 require.config({
 
     paths: {
-        jquery: 'test/lib/jquery-1.8.2.min',
+        jquery: 'test/helpers/lib/jquery-1.8.2.min',
         underscore: '../assets/underscore',
         backbone: '../assets/backbone',
-        status: '../assets/UserStatus',
+        status: 'test/helpers/stubs/UserStatus',
         tiddlerModel: '../assets/TiddlerModel',
         tiddlerCollection: '../assets/TiddlerCollection'
     }

@@ -4,22 +4,9 @@ describe('Tiddler Collection Tests', function () {
     var TiddlerCollection;
 
     beforeEach(function () {
-        var mockStatus = {
-            attributes: {
-                space: {
-                    recipe: 'test_private'
-                }
-            }
-        };
 
-        var backbone = testr('backbone');
-        TiddlerModel = testr('tiddlerModel', {'backbone': backbone, 'status': mockStatus });
-
-        TiddlerCollection = testr('tiddlerCollection', {
-            'backbone': Backbone,
-            'tiddlerModel': TiddlerModel,
-            'status': mockStatus
-        });
+        TiddlerModel = require('tiddlerModel');
+        TiddlerCollection = require('tiddlerCollection');
     });
 
     it('should use the tiddler model', function () {
