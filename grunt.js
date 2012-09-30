@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
         jasmine: {
             src : 'assets/require.js',
-            helpers : 'test/helpers/**/*.js',
+            helpers : 'test/helpers/lib/*.js',
             timeout : 10000
         }
     });
