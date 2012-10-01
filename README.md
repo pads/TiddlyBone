@@ -12,6 +12,12 @@ Requires:
 * [PhantomJS](http://phantomjs.org/)
 * [tsapp](https://github.com/cdent/tsapp).  The documentation there should suffice.
 
+Install jam and grunt globally:
+
+`npm install -g jam`
+
+`npm install -g grunt`
+
 Run `npm install` to fetch the required node modules.
 
 Run `jam install` to fetch the required JavaScript dependencies.
