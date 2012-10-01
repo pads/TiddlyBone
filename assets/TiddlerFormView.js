@@ -13,8 +13,6 @@ define(['jquery', 'backbone', 'hbt!TiddlerForm'], function ($, Backbone, templat
             });
 
             this.model.save();
-            document.location.href = '#tiddler/' + this.model.get('title');
-
             return false;
         },
 
