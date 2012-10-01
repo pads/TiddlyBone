@@ -4,7 +4,7 @@ define(['jquery', 'backbone', 'tiddlerFormView', 'hbt!Tiddler'],
 
             events: {
                 'click .edit-button': 'edit',
-                'click .delete-button': 'delete'
+                'click .delete-button': 'doDelete'
             },
 
             render: function () {
@@ -20,7 +20,7 @@ define(['jquery', 'backbone', 'tiddlerFormView', 'hbt!Tiddler'],
                 document.location.href = '#editTiddler/' + this.model.get('title');
             },
 
-            delete: function () {
+            doDelete: function () {
                 this.model.destroy({
                     success:function () {
                         document.location.href = '#home';
