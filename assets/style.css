@@ -41,7 +41,7 @@ a {
     color: #0000FF;
 }
 
-li a {
+li a, h1 a {
     text-decoration: none;
 }
 
