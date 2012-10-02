@@ -14,7 +14,7 @@ Requires:
 
 Install jam and grunt globally:
 
-`npm install -g jam`
+`npm install -g jamjs`
 
 `npm install -g grunt`
 
