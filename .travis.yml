@@ -3,9 +3,9 @@ node_js:
   - 0.8
 install:
   - "npm install -g jamjs grunt"
+  - "npm install"
   - "jam install"
 before_script: "grunt copy-deps"
-test: "grunt jasmine"
 after_script:
   - "grunt clean-deps"
   - "jam compile assets/require.js"
