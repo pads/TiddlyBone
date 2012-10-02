@@ -1,0 +1,21 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    Europe/London
+
+  node:
+    version:
+      0.8.2
+
+dependencies:
+  pre:
+    - npm install -g jamjs grunt
+    - jam install
+
+test:
+  override:
+    - npm test
+  post:
+    - grunt clean-deps
+    - jam compile assets/require.js
