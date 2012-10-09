@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-jasmine-runner');
 
-    grunt.registerTask('default', 'lint jasmine');
+    grunt.registerTask('default', 'lint copy-deps jasmine');
 
     grunt.registerTask('copy-deps', 'Symlink jam dependencies to the assets folder.', function() {
 
@@ -31,8 +31,12 @@ module.exports = function(grunt) {
 
         grunt.file.recurse('jam', function(absolutePath, rootDir, subDir, fileName) {
             if(fileName.indexOf('.js') !== -1 && fileName.indexOf('.json') === -1) {
-                grunt.log.writeln('symlinking ' + absolutePath + ' to assets folder');
-                fs.symlinkSync('../' + absolutePath, 'assets/' + fileName);
+
+                if(!fs.existsSync('assets/' + fileName)) {
+
+                    grunt.log.writeln('symlinking ' + absolutePath + ' to assets folder');
+                    fs.symlinkSync('../' + absolutePath, 'assets/' + fileName);
+                }
             }
         });
 
@@ -43,9 +47,14 @@ module.exports = function(grunt) {
         var fs = require('fs');
 
         grunt.file.recurse('jam', function(absolutePath, rootDir, subDir, fileName) {
+
             if(fileName.indexOf('.js') !== -1 && fileName.indexOf('.json') === -1) {
-                grunt.log.writeln('symlinking ' + absolutePath + ' to assets folder');
-                fs.unlinkSync('assets/' + fileName);
+
+                if(fs.existsSync('assets/' + fileName)) {
+
+                    grunt.log.writeln('removing symlink ' + absolutePath + ' from assets folder');
+                    fs.unlinkSync('assets/' + fileName);
+                }
             }
         });
 
