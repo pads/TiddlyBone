@@ -21,5 +21,8 @@
             "handlebars": "1.0.x",
             "hbt": "0.0.3"
         }
+    },
+    "scripts": {
+        "test": "grunt jasmine"
     }
 }

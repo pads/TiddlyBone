@@ -19,39 +19,11 @@ require.config({
 });
 
 require([
-            'handlebars',
-            'tiddlerModel',
-            'tiddlerCollection',
-            'tiddlerListItemView',
-            '/test/spec/TiddlerModelSpec.js',
-            '/test/spec/TiddlerCollectionSpec.js',
-            '/test/spec/TiddlerListItemViewSpec.js'
-        ],
-        function () {
-
-            var jasmineEnv = jasmine.getEnv();
-            jasmineEnv.updateInterval = 1000;
-
-            var htmlReporter = new jasmine.HtmlReporter();
-
-            jasmineEnv.addReporter(htmlReporter);
-
-            jasmineEnv.specFilter = function (spec) {
-                return htmlReporter.specFilter(spec);
-            };
-
-            var currentWindowOnload = window.onload;
-
-            window.onload = function () {
-                if (currentWindowOnload) {
-                    currentWindowOnload();
-                }
-                execJasmine();
-            };
-
-            function execJasmine() {
-                jasmineEnv.execute();
-            }
-
-        }
-);
+    'handlebars',
+    'tiddlerModel',
+    'tiddlerCollection',
+    'tiddlerListItemView',
+    '/test/spec/TiddlerModelSpec.js',
+    '/test/spec/TiddlerCollectionSpec.js',
+    '/test/spec/TiddlerListItemViewSpec.js'
+]);

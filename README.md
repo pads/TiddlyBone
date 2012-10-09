@@ -14,7 +14,7 @@ Requires:
 
 Install jam and grunt globally:
 
-`npm install -g jam`
+`npm install -g jamjs`
 
 `npm install -g grunt`
 
@@ -32,7 +32,9 @@ file.
 Testing
 =======
 
-run `grunt jasmine` to run tests in the terminal or `grunt jasmine-server` to run in a browser.
+Run `grunt jasmine` to run tests in the terminal or `grunt jasmine-server` to run in a browser.
+
+Running `npm test` in turn runs `grunt jasmine`
 
 Space Inclusion
 ===============

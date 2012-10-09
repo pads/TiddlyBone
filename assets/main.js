@@ -56,7 +56,7 @@ require(
                 this.tiddlerView = new TiddlerView({ model: this.tiddler });
                 this.tiddler.fetch({
                     success: function () {
-                        $('section').html(context.tiddlerView.render().el);
+                        context.tiddlerView.render();
                     }
                 });
             },
@@ -67,7 +67,7 @@ require(
                 this.tiddlerView = new TiddlerView({ model: this.tiddler });
                 this.tiddler.fetch({
                     success: function () {
-                        $('section').html(context.tiddlerView.render().el);
+                        context.tiddlerView.render();
                     }
                 });
             },

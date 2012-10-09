@@ -1,6 +1,11 @@
 language: node_js
 node_js:
   - 0.8
-before_script: "jam install && grunt copy-deps"
-test: "grunt jasmine"
-after_script: "jam compile assets/require.js"
+install:
+  - "npm install -g jamjs grunt"
+  - "npm install"
+  - "jam install"
+before_script: "grunt copy-deps"
+after_script:
+  - "grunt clean-deps"
+  - "jam compile assets/require.js"

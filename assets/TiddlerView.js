@@ -1,6 +1,13 @@
-define(['jquery', 'backbone', 'tiddlerFormView', 'hbt!Tiddler'],
-    function ($, Backbone, TiddlerFormView, template) {
+define(['jquery', 'underscore', 'backbone', 'tiddlerFormView', 'hbt!Tiddler'],
+    function ($, _, Backbone, TiddlerFormView, template) {
         return Backbone.View.extend({
+
+            el: 'section',
+
+            initialize: function () {
+                _.bindAll(this, 'render');
+                this.model.bind('change', this.render, this);
+            },
 
             events: {
                 'click .edit-button': 'edit',
@@ -9,15 +16,11 @@ define(['jquery', 'backbone', 'tiddlerFormView', 'hbt!Tiddler'],
 
             render: function () {
                 $(this.el).html(template(this.model.toJSON()));
-                return this;
             },
 
             edit: function () {
                 this.newTiddlerForm = new TiddlerFormView({ model: this.model });
-                $('section').html(this.newTiddlerForm.render().el);
-
-                //TODO: this is a bad way to trick Backbone into reloading this view when edit is finished.
-                document.location.href = '#editTiddler/' + this.model.get('title');
+                $(this.el).html(this.newTiddlerForm.render().el);
             },
 
             doDelete: function () {

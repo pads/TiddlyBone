@@ -41,7 +41,7 @@ a {
     color: #0000FF;
 }
 
-li a {
+li a, h1 a {
     text-decoration: none;
 }
 
@@ -76,7 +76,7 @@ article ul {
     padding-bottom: 3em;
 }
 
-#form-wrapper input, #form-wrapper textarea {
+#form-wrapper input, #form-wrapper button, #form-wrapper textarea {
     padding: 5px;
     width: 571px;
     font-size: 1.4em;
@@ -88,7 +88,7 @@ article ul {
     border: 2px solid #900;
 }
 
-#form-wrapper input.submit-button {
+#form-wrapper button.submit-button {
     width: 100px;
     float: right;
 }
