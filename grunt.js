@@ -14,7 +14,10 @@ module.exports = function(grunt) {
         jasmine: {
             src : 'assets/require.js',
             helpers : 'test/helpers/lib/*.js',
-            timeout : 10000
+            timeout : 10000,
+            junit : {
+                output : 'junit/'
+            }
         }
     });
 
