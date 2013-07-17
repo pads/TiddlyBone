@@ -7,6 +7,7 @@
         "email": "pads@thisispads.me.uk",
         "url": "http://thisispads.me.uk"
     },
+    "license": "MIT",
     "dependencies": {
         "grunt": "0.3.x",
         "grunt-jasmine-runner": "0.5.x",
